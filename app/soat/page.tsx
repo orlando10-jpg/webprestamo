@@ -28,8 +28,11 @@ export default function SOAT() {
     if (ctaRef.current) ctaObserver.observe(ctaRef.current)
 
     return () => {
-      if (benefitsRef.current) benefitsObserver.unobserve(benefitsRef.current)
-      if (ctaRef.current) ctaObserver.unobserve(ctaRef.current)
+      const benefitsEl = benefitsRef.current
+      const ctaEl = ctaRef.current
+      
+      if (benefitsEl) benefitsObserver.unobserve(benefitsEl)
+      if (ctaEl) ctaObserver.unobserve(ctaEl)
     }
   }, [])
 

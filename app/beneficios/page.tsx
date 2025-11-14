@@ -35,9 +35,13 @@ export default function Beneficios() {
     if (ctaRef.current) ctaObserver.observe(ctaRef.current)
 
     return () => {
-      if (cardsRef.current) cardsObserver.unobserve(cardsRef.current)
-      if (moreRef.current) moreObserver.unobserve(moreRef.current)
-      if (ctaRef.current) ctaObserver.unobserve(ctaRef.current)
+      const cardsEl = cardsRef.current
+      const moreEl = moreRef.current
+      const ctaEl = ctaRef.current
+      
+      if (cardsEl) cardsObserver.unobserve(cardsEl)
+      if (moreEl) moreObserver.unobserve(moreEl)
+      if (ctaEl) ctaObserver.unobserve(ctaEl)
     }
   }, [])
 

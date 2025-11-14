@@ -23,8 +23,9 @@ export default function Contacto() {
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
+      const sectionEl = sectionRef.current
+      if (sectionEl) {
+        observer.unobserve(sectionEl)
       }
     }
   }, [])

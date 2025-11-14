@@ -142,7 +142,7 @@ export default function TrabajaConNosotros() {
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/90 to-purple-900/70 flex items-center justify-center">
             <div className="text-center px-6">
               <h3 className="text-3xl md:text-5xl font-black text-white mb-4">
-                "Juntos construimos el futuro"
+                &ldquo;Juntos construimos el futuro&rdquo;
               </h3>
               <p className="text-xl text-white/95 max-w-2xl mx-auto">
                 En Crédito Fácil, cada miembro del equipo es parte esencial de nuestra misión
