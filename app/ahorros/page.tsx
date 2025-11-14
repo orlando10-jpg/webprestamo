@@ -53,10 +53,15 @@ export default function Ahorros() {
     if (ctaRef.current) ctaObserver.observe(ctaRef.current)
 
     return () => {
-      if (heroRef.current) heroObserver.unobserve(heroRef.current)
-      if (productsRef.current) productsObserver.unobserve(productsRef.current)
-      if (reqRef.current) reqObserver.unobserve(reqRef.current)
-      if (ctaRef.current) ctaObserver.unobserve(ctaRef.current)
+      const heroEl = heroRef.current
+      const productsEl = productsRef.current
+      const reqEl = reqRef.current
+      const ctaEl = ctaRef.current
+      
+      if (heroEl) heroObserver.unobserve(heroEl)
+      if (productsEl) productsObserver.unobserve(productsEl)
+      if (reqEl) reqObserver.unobserve(reqEl)
+      if (ctaEl) ctaObserver.unobserve(ctaEl)
     }
   }, [])
 
